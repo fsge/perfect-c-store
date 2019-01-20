@@ -1,5 +1,60 @@
 {% assign mainMenu = include.contentful.navigationMenu | where_exp: "menu", "menu.title == 'main'" %}
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121113321-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121113321-1');
+  gtag('config', 'AW-796784736');
+</script>
+
 <header>
-  
+  <nav>
+    <a class="logo-wrapper" href="/">
+      <img src="/img/logo-{{ include.logo }}.svg" alt="FSG Clarity" />
+    </a>
+    <a class="mobile-nav-open">
+      <svg version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+         x="0px" y="0px" width="34.7px" height="23.4px" viewBox="0 0 34.7 23.4" style="enable-background:new 0 0 34.7 23.4;"
+         xml:space="preserve">
+        <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="1" x2="33.7" y2="1.1"/>
+        <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="11.7" x2="33.7" y2="11.7"/>
+        <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="22.3" x2="33.7" y2="22.4"/>
+      </svg>
+    </a>
+    <ul>
+      <li class="hide-desktop"> <a href="https://fsgenergy.com/"> <span>Home</span> </a> </li>
+      {% for link in mainMenu[0].links %}
+        {% include navLink.html link=link page=include.page %}
+      {% endfor %}
+    </ul>
+  </nav>
 </header>
+
+<script>
+  (function() {
+    var trigger = document.querySelector('.mobile-nav-open'),
+        menu = document.querySelector('header > nav');
+
+    trigger.addEventListener('click', function() {
+      if (menu.classList.toString().indexOf('open') > -1) {
+        menu.classList.remove('open');
+      } else {
+        menu.classList.add('open');
+      }
+    });
+  })();
+</script>
+
+
+{% if include.page.permalink == "/" %}
+  <style>
+    header nav ul li a {
+      opacity: 1;
+    }
+  </style>
+{% endif %}
