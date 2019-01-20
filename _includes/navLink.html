@@ -1,0 +1,27 @@
+{% capture href %}{% if include.link.link_override %}{{ include.link.link_override }}{% else %}{{ include.link.page.permalink }}{% endif %}{% endcapture %}
+
+{% if include.link.is_button %}
+  <li class="{% if include.link.has_divider %} has-divider {% endif %} header-button">
+    <a href="{{ href }}">
+      <span>{{ include.link.title }}</span>
+    </a>
+  </li>
+{% elsif include.link.sub_links == null %}
+  <li class="{% if include.link.has_divider %} has-divider {% endif %} ">
+    <a class="{% if include.page.permalink == include.link.page.permalink %} active {% endif %}" href="{{ href }}">
+      <span>{{ include.link.title }}</span>
+    </a>
+  </li>
+{% else %}
+  <li class="{% if include.link.has_divider %} has-divider {% endif %} dropdown">
+    <a class="{% if include.page.permalink == include.link.page.permalink %} active {% endif %}" href="{{ href }}">
+      <span>{{ include.link.title }}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.5.5l-4 4-4-4"/></svg>
+    </a>
+    <ul>
+      {% for subLink in include.link.sub_links %}
+        {% include navLink.html link=subLink %}
+      {% endfor %}
+    </ul>
+  </li>
+{% endif %}
