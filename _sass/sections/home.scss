@@ -1,8 +1,7 @@
 header {
   padding: 25px 45px;
-  border-bottom: none;
+  border-bottom: 1px solid #EBEDF1;
   z-index: 9999;
-  background: #483FF2;
 
   nav {
     display: flex;
@@ -15,7 +14,7 @@ header {
     .logo-wrapper {
       display: inline-block;
       vertical-align: middle;
-      flex: 0 0 170px;
+      flex: 0 0 76.47px;
     }
 
     .mobile-nav-open {
@@ -83,10 +82,12 @@ header {
 
         &.header-button {
           a {
-            background: #5BB95B;
-            color: white;
-            font-weight: 600;
-            padding: 10px 20px;
+            background: #5153f6;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 12px 25px;
+            box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.05);
+            color:#fff;
             border-radius: 4px;
             opacity: 1;
           }
