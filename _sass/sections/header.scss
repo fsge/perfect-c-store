@@ -67,6 +67,8 @@ header {
         }
 
         &.has-divider {
+              padding-left: 40px;
+          
           &:before {
             content: '';
             height: 1.4em;
