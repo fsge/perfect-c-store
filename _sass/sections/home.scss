@@ -2,6 +2,9 @@ header {
   padding: 25px 45px;
   border-bottom: none;
   z-index: 9999;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   nav {
     display: flex;
