@@ -14,7 +14,7 @@ const stepConfig = [
   },
   {
     text: `How many lighting zones do you have?`,
-    icon: `building`,
+    icon: `lighting`,
     min: 0,
     max: 50,
     stateVar: `lightingZones`
