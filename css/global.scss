@@ -94,4 +94,12 @@ background:#433AF1;
 transition:.1s;
 }
 
+.hero > span a {
+    display: inline;
+    background: none;
+    width: inherit;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
 @import "utilities/responsive";
