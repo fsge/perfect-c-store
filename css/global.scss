@@ -94,7 +94,7 @@ background:#433AF1;
 transition:.1s;
 }
 
-.hero > a:nth-of-type(2) {
+.hero > a:nth-of-type(2), .bottom-cta > div a:nth-of-type(2) {
     display: inline;
     background: none;
     width: inherit;
