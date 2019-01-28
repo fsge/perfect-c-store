@@ -33,7 +33,7 @@ const stepConfig = [
     max: 10,
     stateVar: `rtus`
   }
-]
+];
 
 const inputMapping = {
   refrigerationUnits: 'Refrigeration Units',
