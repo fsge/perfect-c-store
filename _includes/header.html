@@ -14,7 +14,7 @@
 <header>
   <nav>
     <a class="logo-wrapper" href="/">
-      <img src="/img/logo-{{ include.logo }}.svg" alt="FSG Clarity" />
+      <img src="/img/logo-{{ include.logo }}.svg" alt="Perfect C-Store" />
     </a>
     <a class="mobile-nav-open">
       <svg version="1.1"
@@ -27,7 +27,7 @@
       </svg>
     </a>
     <ul>
-      <li class="hide-desktop"> <a href="https://fsgenergy.com/"> <span>Home</span> </a> </li>
+      <li class="hide-desktop"> <a href="/"> <span>Home</span> </a> </li>
       {% for link in mainMenu[0].links %}
         {% include navLink.html link=link page=include.page %}
       {% endfor %}
