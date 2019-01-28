@@ -1,0 +1,215 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$background: #4b3efb;
+$shade: #3f33f0;
+$green: #00bcaa;
+$textColor: #ffffff;
+$inputTextColor: #0e1934;
+$inputSeperator: #deecff;
+$mutedTextColor: rgba(255, 255, 255, 0.4);
+
+@import "components/range-field";
+
+.savings-calculator, .input-step {
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: $textColor;
+}
+
+.input-step {
+  padding: 0 15px;
+
+  .img-wrapper {
+    margin-top: 45px;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      max-height: 410px;
+      height: 100%;
+    }
+  }
+
+  p {
+    font-size: 21px;
+    margin-top: 45px;
+  }
+
+  .btn-row {
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 450px;
+    max-width: 100%;
+
+    & > .btn {
+      flex: 1;
+    }
+
+    & > .btn:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  .skip-row {
+    margin-top: 15px;
+    a {
+      cursor: pointer;
+      color: $mutedTextColor;
+      text-decoration: none;
+      font-size: 21px;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.final-step {
+  padding: 0 15px;
+
+  & > p {
+    text-align: center;
+  }
+
+  .input-wrapper {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .btn {
+      border-radius: 0;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      font-family: 'sofia-pro';
+      display: block;
+      font-size: 14px;
+      background: $textColor;
+      border: 0;
+      outline: 0;
+      padding: 15px 15px 15px 15px;
+      color: $inputTextColor;
+      min-width: 0;
+
+      & + input {
+        border-top: 1px solid $inputSeperator;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $inputTextColor;
+      }
+
+      &::-moz-placeholder {
+        color: $inputTextColor;
+      }
+
+      &:-ms-input-placeholder {
+        color: $inputTextColor;
+      }
+
+      &:-moz-placeholder {
+        color: $inputTextColor;
+      }
+    }
+  }
+}
+
+.step-indicator {
+  .step {
+    background: $shade;
+    color: $textColor;
+    margin: 15px;
+    line-height: 48px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 21px;
+    display: inline-block;
+
+    &.active {
+      background: $green;
+    }
+  }
+}
+
+button.btn {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  background: currentColor;
+  border: 2px solid currentColor;
+  padding: 12px 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-family: 'sofia-pro';
+  font-size: 21px;
+  font-weight: 500;
+  display: inline-block;
+
+  &.default {
+    color: $shade;
+    transition: all 0.3s;
+
+    &:not([disabled]):hover, &:not([disabled]):focus {
+      color: darken($shade, 10%);
+    }
+
+    span {
+      font-weight: 500;
+      color: $textColor;
+    }
+  }
+
+  &.primary {
+    color: $green;
+
+    &:not([disabled]):hover, &:not([disabled]):focus {
+      color: darken($green, 5%);
+    }
+
+    span {
+      font-weight: 500;
+      color: $textColor;
+    }
+  }
+
+  span {
+    display: inline-block;
+    line-height: 1.4em;
+
+    & > * {
+      max-height: 1.2em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    & > *:not(:first-child) {
+      margin-left: 6px;
+    }
+  }
+}
