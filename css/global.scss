@@ -94,7 +94,7 @@ background:#433AF1;
 transition:.1s;
 }
 
-.hero > span a {
+.hero > a:nth-of-type(2) {
     display: inline;
     background: none;
     width: inherit;
