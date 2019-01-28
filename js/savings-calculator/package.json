@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "webpack",
     "lockdown": "rm -rf node_modules npm-shrinkwrap.json && npm install --no-optional && npm shrinkwrap --dev"
   },
   "author": "Joah Gerstenberg @ The Neverwoods, LLC",
