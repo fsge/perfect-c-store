@@ -227,6 +227,17 @@ button.btn {
   .input-step .img-wrapper {
   margin-top:25px;
   }
-  .range-input-wrapper {}
+  .range-input-wrapper {
   max-width:100%;
+  }
+  .step-indicator .step {
+    margin: 7px;
+    line-height: 40px;
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
 }
+  
+}
+
+
