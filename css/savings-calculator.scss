@@ -213,3 +213,9 @@ button.btn {
     }
   }
 }
+
+@media (max-width: 900px) {
+.input-step .img-wrapper img {
+    max-height: 150px;
+}
+}
