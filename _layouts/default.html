@@ -35,27 +35,16 @@
     <script type="text/javascript" src="//cdn.callrail.com/companies/201429118/c3b413ba4d5cd2be1243/12/swap.js"></script> 
   </head>
 
-  <body>
+  <body class="default">
     <div class="page-wrapper">
-      {% include header.html contentful=contentful page=page logo="color" %}
+      {% include header.html contentful=contentful page=page logo="white" %}
       <main>
-        <div class="container">
-          {% for section in page.page_sections %}
-            {% include section.html section=section %}
-          {% endfor %}
-        </div>
+        {% for section in page.page_sections %}
+          {% include section.html section=section %}
+        {% endfor %}
       </main>
       {% include footer.html contentful=contentful %}
     </div>
     
-    <script>
-  window.intercomSettings = {
-    app_id: "phj3puih"
-  };
-</script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/phj3puih';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
-
-    
-    
-  </body>
+     </body>
 </html>
