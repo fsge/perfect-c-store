@@ -1,8 +1,8 @@
-title: FSG Energy
+title: FSG Perfect C Store
 email: team@theneverwoods.com
 description: ""
 baseurl: ""
-url: "https://fsgenergy.com"
+url: "https://perfectcstore.com"
 plugins: 
   - jekyll-minifier
 sass:
