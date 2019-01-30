@@ -1,6 +1,5 @@
 header {
   padding: 25px 45px;
-  border-bottom: 1px solid #EBEDF1;
   z-index: 9999;
 
   nav {
@@ -193,4 +192,8 @@ header {
 }
 .hide-desktop {
 display:none;
+}
+
+.default header {
+background:#fff;
 }
