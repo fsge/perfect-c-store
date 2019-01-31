@@ -6,6 +6,13 @@ import RangeInput from './RangeInput.jsx';
 
 const stepConfig = [
   {
+    text: `How many stores do you have?`,
+    icon: `store`,
+    min: 0,
+    max: 300,
+    stateVar: `stores`
+  },
+  {
     text: `How many refrigeration units do you have?`,
     icon: `building`,
     min: 0,
@@ -32,13 +39,6 @@ const stepConfig = [
     min: 0,
     max: 10,
     stateVar: `rtus`
-  },
-  {
-    text: `How many stores do you have?`,
-    icon: `store`,
-    min: 0,
-    max: 300,
-    stateVar: `stores`
   }
 ];
 
