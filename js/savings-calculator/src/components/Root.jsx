@@ -32,6 +32,13 @@ const stepConfig = [
     min: 0,
     max: 10,
     stateVar: `rtus`
+  },
+  {
+    text: `How many stores do you have?`,
+    icon: `store`,
+    min: 0,
+    max: 300,
+    stateVar: `stores`
   }
 ];
 
@@ -42,7 +49,8 @@ const inputMapping = {
   rtus: 'RTUs',
   totalSavings: 'Total Savings',
   email: 'Email',
-  name: 'Name'
+  name: 'Name',
+  stores: `Stores`
 };
 
 class Root extends React.Component {
@@ -55,6 +63,7 @@ class Root extends React.Component {
       lightingZones: 12,
       fuelDispensers: 36,
       rtus: 3,
+      stores: 1,
       name: ``,
       email: ``,
       totalSavings: `$0`
@@ -86,7 +95,9 @@ class Root extends React.Component {
     $ += state.fuelDispensers * 675;
     $ += state.refrigerationUnits * 800;
 
-    return `$${ $ }`;
+    $ = $ * state.stores;
+
+    return `$${ $.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }.00`;
   }
 
   prevStep() {
@@ -95,7 +106,7 @@ class Root extends React.Component {
         step: this.state.step - 1
       });
     } else {
-      window.history.back();
+      window.location.href = `/`;
     }
   }
 
@@ -109,7 +120,7 @@ class Root extends React.Component {
     let currentStep = stepConfig[this.state.step - 1];
 
     this.setState({
-      [currentStep.stateVar]: 0,
+      [currentStep.stateVar]: currentStep.min,
       step: this.state.step + 1
     });
   }
@@ -165,7 +176,7 @@ class Root extends React.Component {
             </div>
           ) : (
             <div className="final-step">
-              <p>How many drink coolers do you have?</p>
+              <p>Please provide email and we will send you your savings estimate</p>
               <div className="input-wrapper">
                 <input 
                   type="text" 

@@ -13,7 +13,6 @@ $mutedTextColor: rgba(255, 255, 255, 0.4);
 @import "components/range-field";
 
 .savings-calculator, .input-step {
-
   position: relative;
   height: 100%;
   width: 100%;
@@ -142,7 +141,7 @@ $mutedTextColor: rgba(255, 255, 255, 0.4);
     background: $shade;
     color: $textColor;
     margin: 15px;
-    line-height: 48px;
+    line-height: 45px;
     height: 45px;
     width: 45px;
     border-radius: 50%;
