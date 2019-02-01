@@ -8,7 +8,7 @@ const stepConfig = [
   {
     text: `How many stores do you have?`,
     icon: `store`,
-    min: 0,
+    min: 1,
     max: 300,
     stateVar: `stores`
   },
