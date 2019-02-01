@@ -13,28 +13,28 @@ const stepConfig = [
     stateVar: `stores`
   },
   {
-    text: `How many refrigeration units do you have?`,
+    text: `How many refrigeration units do you have per store?`,
     icon: `building`,
     min: 0,
     max: 50,
     stateVar: `refrigerationUnits`
   },
   {
-    text: `How many lighting zones do you have?`,
+    text: `How many lighting zones do you have per store?`,
     icon: `lighting`,
     min: 0,
     max: 50,
     stateVar: `lightingZones`
   },
   {
-    text: `How many fuel dispensers do you have?`,
+    text: `How many fuel dispensers do you have per store?`,
     icon: `fuelPump`,
     min: 0,
     max: 100,
     stateVar: `fuelDispensers`
   },
   {
-    text: `How many RTUs do you have?`,
+    text: `How many RTUs do you have per store?`,
     icon: `rtu`,
     min: 0,
     max: 10,
@@ -59,10 +59,10 @@ class Root extends React.Component {
 
     this.state = {
       step: 1,
-      refrigerationUnits: 12,
-      lightingZones: 12,
-      fuelDispensers: 36,
-      rtus: 3,
+      refrigerationUnits: 1,
+      lightingZones: 1,
+      fuelDispensers: 1,
+      rtus: 1,
       stores: 1,
       name: ``,
       email: ``,
